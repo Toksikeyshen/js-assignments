@@ -30,7 +30,18 @@
  *
  */
 function getFizzBuzz(num) {
-    throw new Error('Not implemented');
+    let f='Fizz';
+    let b='Buzz';
+    switch (0){
+        case num%15:
+            return f+b;
+        case num%3:
+            return 'Fizz';
+        case num%5:
+            return b;
+        default:
+            return num;
+    }
 }
 
 
@@ -46,7 +57,11 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
-    throw new Error('Not implemented');
+    let result=1;
+    for(let i=1;i<=n;i++){
+        result*=i;
+    }
+    return result;
 }
 
 
@@ -63,7 +78,11 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
-    throw new Error('Not implemented');
+    let result=0;
+    for(let i=n1;i<=n2;i++){
+        result+=i;
+    }
+    return result;
 }
 
 
@@ -82,7 +101,8 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,10,10 =>  true
  */
 function isTriangle(a,b,c) {
-    throw new Error('Not implemented');
+    let arr=[a,b,c].sort();
+    return arr[2]<arr[1]+arr[0];
 }
 
 
